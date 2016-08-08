@@ -1,0 +1,84 @@
+---
+logo: Comp provides very small bitmapped image. Would need SVG for final.
+nav: Item 2 is 'active'
+subnav: Applying a font-weight change on hover will produce sizing changes throughout.
+brochure_headline: (H1) Google Fonts does not provide a "light" font-weight for Montserrat, as requested in comp.
+brochure_headline_2: Background image compositions will vary from the comp.
+---
+
+<div class="collage-wrapper">
+	<h1>Element Collage</h1>
+
+	<h2>Brochure Pages</h2>
+
+	<h3>Logo</h3>
+	<a href="#" class="alf_logo"></a>
+
+	<p class="note"><%= current_page.data.logo %></p>
+	<hr>
+
+	<h3>Top Callout</h3>
+	<div id="top-callout">
+		<p>
+			Questions About Liver Disease? Need Support or Resource Info? Call Our Helpline at 1-800-465-4837
+		</p>
+	</div>
+
+	<h3>Nav Menu</h3>
+	<ul id="nav">
+		<li class="item1"><a href="">Item 1</a></li>
+		<li class="item2"><a class="active" href="">Item 2</a></li>
+		<li class="item3"><a href="">Item 3</a></li>
+		<li class="item4"><a href="">Item 4</a></li>
+		<li class="item5"><a href="">Item 5</a></li>
+	</ul>
+
+	<p class="note"><%= current_page.data.nav %></p>	
+	<hr>
+	
+	<h3>Search</h3>
+	<div class="form-field search-bar">
+		<input type="text" name="search">		
+	</div>
+
+	<hr>
+
+	<h3>Sub-Nav</h3>
+	<ul id="subnav">
+		<li class="item1"><a href="">Item 1</a></li>
+		<li class="item2"><a class="active" href="">Item 2</a></li>
+		<li class="item3"><a href="">Item 3</a></li>
+		<li class="item4"><a href="">Item 4</a></li>
+		<li class="item5"><a href="">Item 5</a></li>
+		<li class="item6"><a href="">Item 6</a></li>
+	</ul>
+
+	<p class="note"><%= current_page.data.subnav %></p>
+	<hr>
+
+	<h3>Brochure Headline</h3>
+
+	<div id="brochure-headline" class="block-object <%= page_classes %>">
+		<div class="content">
+			<h1>Ways to Give</h1>
+			<p>
+				With the support of donors like you, the American Liver Foundation can continue to promote education about liver wellness, provide assistance to those affected by and at risk for liver disease, and work to find cures and better treatments for all diseases of the liver. Help us to continue this vital work and make a donation now.
+			</p>			
+		</div>
+	</div>
+
+	<p class="note"><%= current_page.data.brochure_headline %></p>
+	<p class="note"><%= current_page.data.brochure_headline_2 %></p>
+	<hr>	
+
+	<h3>Brochure Quote</h3>
+	<div id="quote" class="block-object">
+		<div class="content">
+			<p>
+				"When I got a liver cancer diagnosis, I was terrified. You were the only person to answer all of my questions. You gave me time and hope.”
+			</p>
+			<h4>Angela</h4>
+			<h6>Caller to Our Free Helpline</h6>			
+		</div>
+	</div>
+</div>
