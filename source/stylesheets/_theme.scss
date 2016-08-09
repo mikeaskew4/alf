@@ -4,6 +4,7 @@
 
 $seagreen: #272f32;
 $red: #f06a4b;
+$deep_red: #ff3b21;
 $coral: #9cbdc7;
 $charcoal: #272f32;
 $black: #231f20;
@@ -37,6 +38,7 @@ h6 {
 p {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
+	line-height: 22px;
 }
 
 a {
@@ -46,15 +48,19 @@ a {
 .collage-wrapper {
 	margin: 5%;
 	hr {
-		margin: 2em 0 4em;
+		margin: 4em;
 		color: #eee;
 		border-color: #eee;
 		outline-color: #eee;
 		border-style: dashed;
+		@media (max-width: 767px) {
+			margin: 6em 0;
+		}
 	}
 	p.note {
 		font-style: italic;
 		font-size: 12px;
+		line-height: 12px;
 		&:before {
 			content: "*";
 			display: inline;
@@ -62,12 +68,16 @@ a {
 	}
 }
 
+// logo
+
 .alf_logo {
   display: block;
   height: 80px;
   width: 100px;
   background: url('/images/alf_logo.jpg');
 }
+
+// top callout
 
 #top-callout {
 	background: $seagreen;
@@ -79,6 +89,8 @@ a {
 		font-weight: 400;		
 	}
 }
+
+// navs
 
 ul#nav,
 ul#subnav {
@@ -96,6 +108,8 @@ ul#subnav {
 		}
 	}
 }
+
+// nav
 
 ul#nav {
 	li {
@@ -118,6 +132,8 @@ ul#nav {
 		}
 	}
 }
+
+// subnav
 
 ul#subnav {
 	display: table;
@@ -163,9 +179,12 @@ ul#subnav {
 	}
 }
 
+// search form
+
 input {
 	color: $coral;
-	font-family: open sans;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
 	font-size: 15px;
 	line-height: 25px;
 	outline: none;
@@ -188,6 +207,8 @@ input {
 	}
 }
 
+// block objects with big text
+
 .block-object {
 	display: table;
 	width: 100%;
@@ -196,17 +217,19 @@ input {
 		display: table-cell;
 		vertical-align: middle;
 		> * {
-			margin: 0 15%;
+			margin: 0 10%;
 		}
 	}
 }
+
+// brochure headline block object
 
 #brochure-headline {
 	background: url('https://placekitten.com/1000/300') no-repeat;
 	background-size: cover;
 	.content {
 		> * {
-			width: 35%;
+			width: 40%;
 		}
 		h1 {
 			margin-bottom: 1em;
@@ -222,6 +245,8 @@ input {
 		}
 	}
 }
+
+// quote block object
 
 #quote {
 	background: $coral;
@@ -242,3 +267,179 @@ input {
 		}
 	}
 }
+
+// link options 
+
+.link-options {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			width: 35%;
+			min-height: 116px;
+			float: left;
+			margin: 0 10%;
+			padding-top: 2em;
+			border-top: 1px solid #eee;
+			&:nth-child(odd) {
+				margin-right: 5%;
+			}
+			&:nth-child(even) {
+				margin-left: 5%;
+			}
+			&:nth-child(1),
+			&:nth-child(2) {
+				border-top: none;
+			}
+			a {
+				color: $deep_red;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: 17px;
+				text-transform: uppercase;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			p {
+				color: #666;
+			}
+		}
+	}
+}
+
+
+// footer
+
+section#footer {
+	background: $seagreen;
+	width: 100%;
+	min-height: 100px;
+	border-top: 5px solid $deep_red;
+	ul#social-nav,
+	ul#footer-nav {
+		list-style-type: none;
+		margin: 0;
+	}
+	ul#social-nav {
+		padding: 0 5%;
+		text-align: center;
+		li {
+			display: inline-block;
+			padding: 1.5em 0.5em 0;
+			a {
+				background: #fff;
+				display: block;
+				width: 25px;
+				height: 25px;
+				border-radius: 25px;
+			}
+		}
+		@media (min-width: 1000px) {
+			float: right;
+		}
+	}
+	ul#footer-nav {
+		padding: 1em 5% 0.25em;
+		li {
+			display: inline-block;
+			&:after {
+				content: " | ";
+				color: #fff;
+				display: inline;
+				margin: 0 8px;
+			}
+			&:last-child:after {
+				display: none;
+			}
+		}
+	}
+	a, p {
+		color: #fff;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 12px;
+	}
+	a {
+		text-decoration: none;
+	}
+	p {
+		margin-top: 0;
+		padding: 0.25em 5% 3em;
+		line-height: 1.25em;
+	}
+}
+
+
+@media (max-width: 767px) {
+	ul#nav,
+	ul[id*="nav"] {
+		display: block;
+		li {
+			display: block !important;
+			width: 100%;
+			text-align: center;
+			a {
+				margin: 0 auto;
+				display: block;
+				width: 100%;
+				border-bottom: 1px solid #ccc;
+				padding: 1em 0;
+				&.active {
+					border-bottom: 1px solid #ccc;
+				}
+				&:after {
+					display: none;
+				}
+			}
+			&:after {
+				display: none !important;
+			}
+		}
+	}
+	ul[id*="nav"]:not(#nav) {
+		li {
+			a {
+				padding: 0;
+				font-size: 1em;
+				line-height: 4em;
+				border-bottom: 1px solid #fff;
+			}
+		}
+	}
+	.form-field.search-bar {
+		width: 100%;
+		&:after {
+			float: right;
+		}
+		input {
+			width: 90%;
+		}
+	}
+	#brochure-headline {
+		.content {
+			> * {
+				width: 80%;
+			}
+		}
+	}
+	.link-options {
+		ul {
+			li {
+				width: 80%;
+				margin: 0 10% !important;
+				&:nth-child(2) {
+					border-top: 1px solid #eee;
+				}
+			}
+		}
+	}
+	section#footer {
+		p {
+			margin: 3em 0 2em;
+		}
+	}
+}
+

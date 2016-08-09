@@ -5,7 +5,7 @@ nav: Item 2 is 'active'
 subnav: Applying a font-weight change on hover will produce sizing changes throughout.
 brochure_headline: (H1) Google Fonts does not provide a "light" font-weight for Montserrat, as requested in comp.
 brochure_headline_2: Background image compositions will vary from the comp.
-quote: Foreground/background ratio is 1.9 (should be 3.0, 4.0 for smaller text).
+quote: Accessibility Issue -- foreground/background ratio is 1.9 (should be 3.0, 4.0 for smaller text).
 ---
 
 <div class="collage-wrapper">
@@ -42,7 +42,7 @@ quote: Foreground/background ratio is 1.9 (should be 3.0, 4.0 for smaller text).
 	
 	<h3>Search</h3>
 	<form title="search-form" class="form-field search-bar">
-		<input type="text" name="search" title="search">		
+		<input type="text" name="search" title="search" placeholder="Search">		
 	</form>
 
 	<hr>
@@ -77,6 +77,31 @@ quote: Foreground/background ratio is 1.9 (should be 3.0, 4.0 for smaller text).
 	<p class="note"><%= current_page.data.brochure_headline_2 %></p>
 	<hr>	
 
+
+
+	<h3>Link Options</h3>
+	<div class="link-options">
+		<ul>
+			<li>
+				<a href="#">Lorem ipsum</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusantium in quam.</p>
+			</li>
+			<li>
+				<a href="#">Culpa veniam ipsum</a>
+				<p>Tempore laboriosam ullam, eaque similique cum nulla consequatur! Neque iure veniam ratione.</p>
+			</li>
+			<li>
+				<a href="#">Lorem ipsum dolor sit amet, consectetur</a>
+				<p>Sunt earum atque perspiciatis ipsum placeat esse similique aliquid eligendi vel eos!</p>
+			</li>
+			<li>
+				<a href="#">Quo excepturi aut dignissimos quidem sit, ducimus magni sed</a>
+				<p>Commodi dolor similique, accusamus fugit quisquam repudiandae dolorum laboriosam quasi, excepturi vitae.</p>
+			</li>
+		</ul>
+	</div>
+	<hr>
+
 	<h3>Brochure Quote</h3>
 	<div id="quote" class="block-object">
 		<div class="content">
@@ -89,7 +114,26 @@ quote: Foreground/background ratio is 1.9 (should be 3.0, 4.0 for smaller text).
 	</div>
 
 	<p class="note"><%= current_page.data.quote %></p>
+	<hr>
+
+	<h3>Footer</h3>
+	<section id="footer">
+		<ul id="social-nav">
+			<li class="item1"><a href=""></a></li>
+			<li class="item2"><a href=""></a></li>
+			<li class="item3"><a href=""></a></li>
+			<li class="item4"><a href=""></a></li>
+			<li class="item5"><a href=""></a></li>
+		</ul>
+		<ul id="footer-nav">
+			<li class="item1"><a href="#">Lorem ipsum</a></li>
+			<li class="item2"><a href="#">Quisquam </a></li>
+			<li class="item3"><a href="#">Consequatur dolore</a></li>
+			<li class="item4"><a href="#">Dicta quam corporis</a></li>
+			<li class="item5"><a href="#">Illo odio</a></li>
+		</ul>
+		<p>© Copyright 2016 American Liver Foundation. All Rights Reserved. The American Liver Foundation is a member of the World Hepatitis Alliance.</p>
+	</section>
+
 	
-
-
 </div>
