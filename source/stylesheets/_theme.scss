@@ -243,34 +243,36 @@ input {
 		}
 	}
 }
-	[ng-show="donate"] {
-		position: fixed;
-		display: table;
-		z-index: 1000;
-		height: 100%;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: rgba(255,255,255,0.95);
-		a.close-overlay {
-			color: $seagreen;
-			position: absolute;
-			top: 50px;
-			right: 10%;
-			font-size: 1.5em;
-			text-decoration: none;
-		}
-		.inner {
-			display: table-cell;
-			vertical-align: middle;
-			padding-bottom: 4em;
-			h1 {
-				width: 90%;
-				margin: 0 auto;
-			}			
-		}
+
+[ng-show="donate"] {
+	position: fixed;
+	display: table;
+	z-index: 1000;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,0.95);
+	.inner {
+		display: table-cell;
+		vertical-align: middle;
+		padding-bottom: 4em;
+		h1 {
+			width: 90%;
+			margin: 0 auto;
+		}			
 	}
+}
+a.close-overlay {
+	color: $seagreen;
+	position: fixed;
+	top: 50px;
+	left: 90%;
+	z-index: 10000;
+	font-size: 1.5em;
+	text-decoration: none;
+}
 
 // block objects with big text
 
@@ -481,6 +483,29 @@ section#footer {
 		}
 		input {
 			width: 90%;
+		}
+	}
+	#support-bar {
+		h3, a {
+			width: 100%;
+			padding: 0;
+			margin: 1em 0;
+			display: block;
+			text-align: center;
+		}
+	}
+	a.close-overlay {
+		right: 10%;
+		padding-right: 10%;
+		height: 50px;
+    width: 80px;
+    margin-left: -20px;		
+		font-size: 1em;
+		top: 15px;
+	}	
+	[ng-show="donate"] {
+		h1 {
+			font-size: 1.25em;
 		}
 	}
 	#brochure-headline {
