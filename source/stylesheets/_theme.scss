@@ -200,12 +200,77 @@ input {
 	border-bottom: 1px solid #000;
 	&.search-bar:after {
 		content: "";
-		background: url('/images/search-glass.svg');
+		background: url('/images/search-glass.svg') no-repeat;
 		display: inline-block;
 		width: 17px;
 		height: 17px;
 	}
 }
+
+// support drop down
+#support-bar {
+	background: $seagreen;
+	display: block;
+	width: 100%;
+	padding: 1em 0;
+	h3 {
+		color: #fff;
+		display: inline-block;
+		margin: 0 0 0 10%;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	a {
+		color: #fff;
+		margin-left: 26px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 15px;		
+		text-decoration: none;
+		&:after {
+			content: "";
+			background: url('/images/caret-down.svg') no-repeat;
+			background-position: center center;
+			display: inline-block;
+			margin: 0 0 0 16px;
+			width: 11px;
+			height: 8px;
+		}
+		&:first-of-type {
+			padding-right: 20px;
+			border-right: 1px solid #fff;
+		}
+	}
+}
+	[ng-show="donate"] {
+		position: fixed;
+		display: table;
+		z-index: 1000;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(255,255,255,0.95);
+		a.close-overlay {
+			color: $seagreen;
+			position: absolute;
+			top: 50px;
+			right: 10%;
+			font-size: 1.5em;
+			text-decoration: none;
+		}
+		.inner {
+			display: table-cell;
+			vertical-align: middle;
+			padding-bottom: 4em;
+			h1 {
+				width: 90%;
+				margin: 0 auto;
+			}			
+		}
+	}
 
 // block objects with big text
 
@@ -442,4 +507,5 @@ section#footer {
 		}
 	}
 }
+
 

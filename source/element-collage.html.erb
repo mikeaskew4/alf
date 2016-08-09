@@ -8,7 +8,7 @@ brochure_headline_2: Background image compositions will vary from the comp.
 quote: Accessibility Issue -- foreground/background ratio is 1.9 (should be 3.0, 4.0 for smaller text).
 ---
 
-<div class="collage-wrapper">
+<div class="collage-wrapper" ng-app="alf">
 	<h1>Element Collage</h1>
 	<p>Displays elements from provided comps in responsive form.</p>
 
@@ -45,6 +45,17 @@ quote: Accessibility Issue -- foreground/background ratio is 1.9 (should be 3.0,
 		<input type="text" name="search" title="search" placeholder="Search">		
 	</form>
 
+	<hr>
+
+	<h3>Support Drop Downs</h3>
+	<div ng-controller="donateDrop">
+		<div id="support-bar">
+			<h3>Support the ALF</h3>
+			<a href="" ng-click="volunteer = !volunteer">Learn how to become a volunteer</a>
+			<a href="" ng-click="donate = !donate">Make a Donation</a>
+		</div>
+		<div ng-include="'/supportoptions/'">
+	</div>
 	<hr>
 
 	<h3>Sub-Nav</h3>
